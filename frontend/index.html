@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato AI - Best Eats in Bangalore</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Zomato AI <span class="highlight">Recommender</span></h1>
+            <p class="tagline">Helping you find the best places to eat in <span class="highlight">Bangalore</span> city
+            </p>
+            <div class="stats-bar">
+                <span class="stat-item"><i data-lucide="map-pin"></i> <span id="locality-count">0</span>
+                    Localities</span>
+                <span class="stat-separator">|</span>
+                <span class="stat-item"><i data-lucide="utensils"></i> <span id="cuisine-count">0</span> Cuisines</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="glass-card search-card">
+                    <form id="recommendation-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label><i data-lucide="map-pin"></i> Select locality <span
+                                        class="required">*</span></label>
+                                <div class="multi-select-container" id="city-select-container">
+                                    <div class="multi-select-display" id="city-display">
+                                        <span class="placeholder">Select locality...</span>
+                                    </div>
+                                    <div class="multi-select-dropdown hidden" id="city-dropdown">
+                                        <div class="dropdown-search">
+                                            <input type="text" id="city-search" placeholder="Search locality...">
+                                        </div>
+                                        <div class="dropdown-options" id="city-options">
+                                            <!-- Options will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="price_range"><i data-lucide="banknote"></i> Price Range <span
+                                        class="required">*</span></label>
+                                <div class="multi-select-container" id="price-select-container">
+                                    <div class="multi-select-display" id="price-display">
+                                        <span class="placeholder">Select price range...</span>
+                                    </div>
+                                    <div class="multi-select-dropdown hidden" id="price-dropdown">
+                                        <div class="dropdown-options" id="price-options">
+                                            <div class="option" data-val="budget">Budget (₹ &lt; 500)</div>
+                                            <div class="option" data-val="mid-range">Mid-range (₹500 - ₹1500)</div>
+                                            <div class="option" data-val="premium">Premium (₹ &gt; 1500)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group cuisine-group">
+                                <label><i data-lucide="utensils"></i> Cuisines (Multi-select)</label>
+                                <div class="multi-select-container" id="cuisine-multi-select">
+                                    <div class="multi-select-display" id="cuisine-display">
+                                        <span class="placeholder">Select cuisines...</span>
+                                    </div>
+                                    <div class="multi-select-dropdown hidden" id="cuisine-dropdown">
+                                        <div class="dropdown-search">
+                                            <input type="text" id="cuisine-search" placeholder="Search cuisines...">
+                                        </div>
+                                        <div class="dropdown-options" id="cuisine-options">
+                                            <!-- Options will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="min_rating"><i data-lucide="star"></i> Min Rating</label>
+                                <input type="number" id="min_rating" step="0.1" min="0" max="5" placeholder="e.g. 4.0">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary" id="submit-btn">
+                            Get Recommendations <i data-lucide="sparkles"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="results-section" class="results-grid">
+                <!-- Recommendations will be injected here -->
+            </section>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Asking the AI for the best spots...</p>
+            </div>
+
+            <div id="error-message" class="hidden glass-card error-card">
+                <i data-lucide="alert-circle"></i>
+                <span id="error-text">Something went wrong.</span>
+            </div>
+        </main>
+        <footer>
+            <p class="powered-by">Powered By Groq AI</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
