@@ -15,64 +15,67 @@ The project is designed using a modular UI structure so that it can easily integ
 
 The FoodTech Recommendation Frontend allows users to interact with an intelligent food recommendation system through a simple web interface.
 
-The system combines:
+### The system combines
 
-User interaction and food search  
-AI-powered recommendation responses  
-Dynamic UI components for displaying suggestions  
-API communication with backend services  
+- User interaction and food search
+- AI-powered recommendation responses
+- Dynamic UI components for displaying suggestions
+- API communication with backend services
 
-The design prioritizes clear user interaction, responsive UI behavior, and flexibility for integrating advanced recommendation capabilities in the future.
+### Design Priorities
 
+- Clear and intuitive user interaction
+- Responsive and interactive UI behavior
+- Modular architecture for easy feature expansion
+- Flexible integration with advanced recommendation models
+- Seamless communication between frontend and backend services
 ---
 
 ## System Capabilities
 
 ### User Interaction Layer
 
-Interactive interface for requesting food recommendations.
+- Interactive interface for requesting food recommendations
 
 Users can:
 
-Search for food items  
-Provide preference-based queries  
-Explore recommended dishes  
+- Search for food items  
+- Provide preference-based queries  
+- Explore recommended dishes  
 
 ---
 
 ### Recommendation Visualization
 
-Display of AI-generated food recommendations.
+- Display of AI-generated food recommendations
 
 Features include:
 
-Structured presentation of food results  
-Visual grouping of recommended items  
-Support for ranking or scoring outputs in the future  
+- Structured presentation of food results  
+- Visual grouping of recommended items  
+- Support for ranking or scoring outputs in the future  
 
 ---
-
 ### API Integration
 
-Communication between the frontend and backend services.
+- Communication between the frontend and backend services
 
 Capabilities include:
 
-REST API communication with recommendation engine  
-Asynchronous data retrieval  
-Request handling and response processing  
-
+- REST API communication with the recommendation engine  
+- Asynchronous data retrieval  
+- Request handling and response processing  
 ---
 
 ### Modular UI Components
 
-The frontend follows a component-based architecture.
+- The frontend follows a component-based architecture
 
 Advantages include:
 
-Reusable UI elements  
-Separation of layout and logic  
-Easy feature expansion and maintenance  
+- Reusable UI elements  
+- Separation of layout and logic  
+- Easy feature expansion and maintenance   
 
 ---
 
@@ -100,56 +103,54 @@ flowchart TD
     I --> J[User Receives Recommendations]
 ```
 
-Core Layers:
+### Core Layers
 
-Interface Layer – User interaction through the web UI  
-Communication Layer – API requests to backend recommendation services  
-Recommendation Layer – Backend AI model generates food suggestions  
-Presentation Layer – Results displayed through structured UI components  
+- **Interface Layer** – User interaction through the web UI  
+- **Communication Layer** – API requests to backend recommendation services  
+- **Recommendation Layer** – Backend AI model generates food suggestions  
+- **Presentation Layer** – Results displayed through structured UI components  
 
 This architecture ensures clean separation between UI, business logic, and machine learning infrastructure.
+---
+
+### Design Principles
+
+- User-centric interface design  
+- Modular component-based architecture  
+- Clear separation of frontend and backend responsibilities  
+- Scalable API communication layer  
+- Lightweight and developer-friendly setup  
+---
+
+### Workflow Summary
+
+- User opens the food recommendation interface  
+- User provides food preferences or search input  
+- Frontend sends request to the recommendation API  
+- Backend AI model processes the request  
+- Recommended food items are returned to the frontend  
+- Results are rendered and displayed in the UI  
 
 ---
 
-## Design Principles
+### Technology Stack
 
-User-centric interface design  
-Modular component-based architecture  
-Clear separation of frontend and backend responsibilities  
-Scalable API communication layer  
-Lightweight and developer-friendly setup  
-
----
-
-## Workflow Summary
-
-User opens the food recommendation interface  
-User provides food preferences or search input  
-Frontend sends request to the recommendation API  
-Backend AI model processes the request  
-Recommended food items are returned to the frontend  
-Results are rendered and displayed in the UI  
-
----
-
-## Technology Stack
-
-Language: JavaScript  
-Framework: React.js  
-UI Technologies: HTML5, CSS3  
-API Communication: Axios / Fetch  
-Architecture Style: Component-based frontend architecture  
-
+| Component            | Technology                          |
+|---------------------|-------------------------------------|
+| Language            | JavaScript                          |
+| Framework           | React.js                            |
+| UI Technologies     | HTML5, CSS3                         |
+| API Communication   | Axios / Fetch                       |
+| Architecture Style  | Component-based frontend architecture |
 ---
 
 ## Intended Use Cases
 
-AI-powered food discovery platforms  
-Smart restaurant recommendation systems  
-Personalized diet planning interfaces  
-Food delivery recommendation platforms  
-Educational demonstrations of recommendation systems  
-
+- AI-powered food discovery platforms  
+- Smart restaurant recommendation systems  
+- Personalized diet planning interfaces  
+- Food delivery recommendation platforms  
+- Educational demonstrations of recommendation systems  
 ---
 
 ## License
