@@ -1,10 +1,10 @@
 # FoodTech Recommendation AI Based System
 
-An **AI-powered food recommendation system** that suggests food items based on user preferences, search queries, and intelligent recommendation algorithms.
+An *AI-powered food recommendation system* that suggests food items based on user preferences, search queries, and intelligent recommendation algorithms.
 
-This project demonstrates how **machine learning models**, **backend APIs**, and **modern frontend interfaces** can work together to build an intelligent food discovery platform.
+This project demonstrates how *machine learning models*, *backend APIs*, and *modern frontend interfaces* can work together to build an intelligent food discovery platform.
 
-The repository is structured into multiple phases that represent the **complete lifecycle of building an AI recommendation system**, from **data preparation to frontend deployment**.
+The repository is structured into multiple phases that represent the *complete lifecycle of building an AI recommendation system*, from *data preparation to frontend deployment*.
 
 ---
 
@@ -17,11 +17,11 @@ Food recommendation systems are widely used in modern digital platforms such as:
 - Diet planning systems
 - Recipe suggestion engines
 
-These systems use **machine learning and recommendation algorithms** to analyze user preferences and suggest relevant food items.
+These systems use *machine learning and recommendation algorithms* to analyze user preferences and suggest relevant food items.
 
-AI-based recommendation systems analyze patterns in data and user behavior to generate personalized suggestions. :contentReference[oaicite:0]{index=0}
+AI-based recommendation systems analyze patterns in data and user behavior to generate personalized suggestions. 
 
-The goal of this project is to build a **modular AI-powered recommendation system** that can:
+The goal of this project is to build a *modular AI-powered recommendation system* that can:
 
 - Process food datasets
 - Generate recommendations using AI models
@@ -32,7 +32,7 @@ The goal of this project is to build a **modular AI-powered recommendation syste
 
 # System Architecture
 
-The project follows a **layered architecture** separating the user interface, backend services, and AI models.
+The project follows a *layered architecture* separating the user interface, backend services, and AI models.
 
 ```mermaid
 flowchart LR
@@ -86,7 +86,7 @@ Capabilities include:
 
 ### Recommendation Layer
 
-This layer contains the **AI recommendation engine**.
+This layer contains the *AI recommendation engine*.
 
 Main functions include:
 
