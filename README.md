@@ -34,27 +34,75 @@ The goal of this project is to build a *modular AI-powered recommendation system
 
 The project follows a *layered architecture* separating the user interface, backend services, and AI models.
 
-```mermaid
-flowchart LR
+## Detailed System Architecture
 
+```mermaid
+flowchart TD
+
+%% User Interaction
 User[User]
 
-UI[Frontend Interface]
-API[API Layer]
-Backend[Backend Service]
-AI[AI Recommendation Model]
+%% Frontend
+subgraph Frontend Layer
+UI[React User Interface]
+Search[Food Search Component]
+Results[Recommendation Display Component]
+APIClient[API Request Handler]
+end
+
+%% Communication
+subgraph Communication Layer
+REST[REST API Requests]
+Async[Async Data Handling]
+end
+
+%% Backend
+subgraph Backend Layer
+Server[Backend API Server]
+Controller[Request Controller]
+Service[Recommendation Service]
+end
+
+%% AI Layer
+subgraph AI Recommendation Engine
+Model[Recommendation Model]
+Ranking[Food Ranking Algorithm]
+end
+
+%% Data Layer
+subgraph Data Layer
 Dataset[Food Dataset]
+Processing[Data Preprocessing]
+Features[Feature Engineering]
+end
 
+%% Flow Connections
 User --> UI
-UI --> API
-API --> Backend
-Backend --> AI
-AI --> Dataset
-AI --> Backend
-Backend --> API
-API --> UI
-```
+UI --> Search
+Search --> APIClient
+APIClient --> REST
+REST --> Server
 
+Server --> Controller
+Controller --> Service
+Service --> Model
+Model --> Ranking
+
+Ranking --> Dataset
+Dataset --> Processing
+Processing --> Features
+Features --> Model
+
+Model --> Service
+Service --> Controller
+Controller --> Server
+
+Server --> REST
+REST --> APIClient
+APIClient --> Results
+Results --> UI
+UI --> User
+```
 ---
 
 # Core Layers
