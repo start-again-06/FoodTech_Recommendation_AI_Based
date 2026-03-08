@@ -226,32 +226,6 @@ Modern recommendation systems often combine machine learning techniques to gener
 
 ---
 
-# Screenshots
-
-### Home Interface
-
-The main interface where users can enter food preferences or queries.
-
-![Home Interface](screenshots/home.png)
-
----
-
-### Recommendation Results
-
-Display of AI-generated food recommendations.
-
-![Recommendation Results](screenshots/recommendations.png)
-
----
-
-### Recommendation Details
-
-Structured presentation of recommended food items.
-
-![Recommendation Details](screenshots/details.png)
-
----
-
 # Design Principles
 
 The system is built following key software engineering principles:
