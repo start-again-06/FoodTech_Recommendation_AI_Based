@@ -81,9 +81,6 @@ Easy feature expansion and maintenance
 The system acts as the interaction layer between users and the AI recommendation backend.
 
 ```mermaid
-## High-Level Architecture
-
-```mermaid
 flowchart TD
 
     A[User] --> B[Frontend Interface]
